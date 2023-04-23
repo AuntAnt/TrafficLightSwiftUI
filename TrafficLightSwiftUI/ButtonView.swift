@@ -14,17 +14,19 @@ struct ButtonView: View {
     var body: some View {
         Button(action: action) {
             Text(buttonText)
-                .frame(width: 200, height: 50)
+                .font(.title)
+                .foregroundColor(.white)
         }
-        .font(.title)
-        .foregroundColor(.white)
+        .frame(width: 200, height: 60)
         .background {
             Color.blue
         }
         .clipShape(RoundedRectangle(cornerRadius: 10))
-        .overlay(RoundedRectangle(cornerRadius: 10).stroke(.white, lineWidth: 4))
+        .overlay(
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(.white, lineWidth: 4)
+        )
         .shadow(radius: 10)
-        .frame(width: 300, height: 50)
     }
 }
 
